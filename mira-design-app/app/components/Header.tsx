@@ -11,18 +11,7 @@ export default function Header() {
         
         {/* Links and profile icon on the right */}
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-8">
-            <a href="#" className="text-base font-normal text-neutral-600 hover:text-neutral-900 transition-colors">
-              About
-            </a>
-            <a href="#" className="text-base font-normal text-neutral-600 hover:text-neutral-900 transition-colors">
-              Services
-            </a>
-            <a href="#" className="text-base font-normal text-neutral-600 hover:text-neutral-900 transition-colors">
-              Portfolio
-            </a>
-          </div>
-          <button className="px-6 py-2.5 rounded-full text-sm font-normal text-neutral-900 bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30 transition-all shadow-sm">
+          <button className="px-6 py-2.5 rounded-full text-sm font-bold text-neutral-900 bg-white/70 backdrop-blur-md border border-white/60 hover:bg-white/80 transition-all shadow-md">
             Start
           </button>
         </div>
