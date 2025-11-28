@@ -2,23 +2,47 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Set Up Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+ANTHROPIC_API_KEY=your_anthropic_api_key
+```
+
+### 3. Set Up Database Tables
+
+Run the SQL migration in `supabase-migrations.sql` in your Supabase SQL Editor to create the necessary tables:
+- `conversations` - Stores conversation sessions linked to user prompts
+- `messages` - Stores individual messages in conversations
+
+The migration includes:
+- Table creation with proper relationships
+- Indexes for performance
+- Row Level Security (RLS) policies
+
+### 4. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- User authentication with Supabase
+- Chat interface with Claude AI integration
+- Conversation history stored in database
+- Prompt-based design curation workflow
 
 ## Learn More
 
